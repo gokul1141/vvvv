@@ -1,0 +1,32 @@
+<html>
+	<head>
+    <title>
+       My map
+    </title>
+ 
+    <link rel="stylesheet" href="lib/Leaflet/leaflet.css"/>
+    <script src="lib/Leaflet/leaflet.js"></script>
+    <script src="data/bhimeshwor.geojson"></script>	
+		
+		
+   
+	</head>
+	<body>
+		<div id="map" style="width: 100%; height: 600px"></div>
+		<script>
+			var map = L.map('map').setView([27.41, 85.57],12);
+			
+		    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+		var bhimeshwor = L.geoJSON(bhimeshwor).addTo(map);
+			
+			
+		</script>
+		
+		
+		
+		
+		
+	</body>
+</html>
